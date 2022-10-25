@@ -1,0 +1,250 @@
+:root{
+  --primary-color:#D2D79F;
+  --secondary-1-color:#90B77D;
+  --secondary-2-color:#42855B;
+  --secondary-3-color:#483838;
+}
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body:has(.clip-art){
+  overflow: hidden;
+}
+/*page container*/
+.container{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  background-color:var(--primary-color);
+  padding: 20px;
+  overflow: hidden;
+}
+/*title*/
+.container > h1{
+  text-align: center;
+  font-size: 5rem;
+  color: var(--secondary-3-color);
+}
+.container span{
+  color: var(--secondary-2-color);
+}
+/*cards container*/
+.cards-container{
+  flex: 1;
+  width: 100%;
+  display: flex;  
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.card-info{
+  height: 35vw;
+  width: 20vw;
+  max-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  text-align: center;
+}
+.card-info > h1{
+  font-size: 25px;
+}
+.card-access{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  animation: reveal-text 1s alternate;
+  height: 50px;
+  padding: 10px;
+}
+.card-access h1{
+  font-size: 2.5vw;
+  color: green;
+} 
+.card-access svg{
+  width: 30px;
+  height: 30px;
+  fill: green;
+}
+/*card*/
+.card{
+  flex: 1;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+}
+.card-inner{
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-blend-mode: difference;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card-inner::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background:url(./assets/card-cover.png);
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size: 80%;
+}
+.card-inner h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50% ,-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .05s ease-in;
+  color: var(--secondary-3-color);
+  font-size: 2.4vw;
+}
+/*scratch reveal*/
+.card-inner span{
+  position: absolute;
+  border-radius: 50%;
+  background-image: url(./assets/trophy.png);
+  background-repeat: repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: var(--secondary-2-color);
+  overflow: hidden;
+}
+.card-inner span.sm{
+  height: 50px;
+  width: 50px;
+}
+.card-inner span.md{
+  height: 100px;
+  width: 100px;
+}
+.card-inner span.lg{
+  height: 150px;
+  width: 150px;
+}
+/*card reveal*/
+.card-inner .card-reveal{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(./assets/trophy.png) no-repeat 50% 70%;
+  background-size: 50%;
+  background-color: var(--secondary-2-color);
+  animation: reveal 2s alternate;
+  text-align: center;
+  padding: 10px;
+  cursor:pointer;
+}
+.card-reveal h1{
+  position: absolute;
+  top: 20%;
+  opacity: 1;
+  color: var(--secondary-3-color);
+}
+@keyframes reveal-text {
+  0%{
+    transform:translate(0 ,100%);
+  }
+  100%{
+    transform:translate(0 ,0);
+  }
+}
+@keyframes reveal {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.card-inner:has(.card-reveal)::before{
+  content: unset;
+}
+/*popup*/
+body:has(.pop-container){
+  overflow: hidden;
+}
+.pop-container{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: var(--primary-color);
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+.pop-container >svg{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  fill: var(--secondary-3-color);
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+/*media query*/
+@media only screen and (max-width: 600px) {
+  .container > h1{
+    font-size: 2.5rem;
+  }
+  .card-access h1{
+    font-size: 15px;
+  }  
+  .card-access svg{
+    width: 20px;
+    height: 20px;
+  }
+  .cards-container{
+    width: 70%;
+    margin: auto;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+  .card-info{
+    height: 200px;
+    width: 130px;
+  }  
+  .card-inner::before{
+    background-size: 70%;
+  }
+  .card-inner h1{
+    font-size: 15px;
+  }
+  .card-inner span{
+    background-size: 8%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .container > h1{
+    font-size: 2rem;
+  }
+  .cards-container{
+    width: 100%;
+  }
+  .card-inner h1{
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "name":"NITE",
+    "path":"php",
+    "media":["cover.png","p1.png","p2.png","p3.png","p4.png","v1.mp4","v2.mp4","v3.mp4"],
+    "description":"Using Php and phpMyAdmin, basic website with 'GET' and 'ADD' functionality, simple signup and signin forms. What to expect from a 5 days project.",
+    "link":"https://github.com/salimdawood/NITE"
+  },
+  {
+    "name":"Managment System",
+    "path":"javafx",
+    "media":["cover.png","p1.png","p2.png","p3.png","p4.png","p5.png","p6.png","p7.png","p8.png"],
+    "description":"Library Managment System. Three user types : guest, librarian, and administrator. 'CRUD' functionality. Developed using Java,Javafx,MySQL.",
+    "link":"https://github.com/salimdawood/Library-Management-System-JavaFx"
+  },
+  {
+    "name":"3D Maze",
+    "path":"unity",
+    "media":["cover.png","p1.png","p2.png","p3.png","p4.png","v1.mp4"],
+    "description":"A simple 3d maze game. Four stages with stepped up difficulty to find the axe,first person camera. Develpoed using C#, and Unity."
+  },
+  {
+    "name":"Voice Recognition Calculator",
+    "path":"android",
+    "media":["cover.png","p1.png","p2.png","v1.mp4","v2.mp4"],
+    "description":"Android application using Java and Android Studio. Calculator with both voice and type inputs.",
+    "link":"https://github.com/salimdawood/Voice-Recognition-Calculator-Android-Application"
+  },
+  {
+    "name":"Front-end Shop",
+    "path":"react",
+    "media":["cover.png","p1.png","p2.png","v1.mp4","v2.mp4","v3.mp4","v4.mp4"],
+    "description":"Deployed on Netlify and developed using JS and Reactjs, a responsive webapp where user can search for html elements and get the source code(HTML+CSS). Also user can save elements to favorites and create own style sheets.",
+    "link":"https://github.com/salimdawood/Frontend-Shop",
+    "deploy":"https://tiny-swan-ff39bc.netlify.app/"
+  },
+  {
+    "name":"Lebanese Homemade",
+    "path":"react+api",
+    "media":["cover.png","p1.png","p2.png","p3.png","p4.png","p5.png","p6.png","v1.mp4","v2.mp4","v3.mp4","v4.mp4"],
+    "description":"Lebanese samll business owners are having hard time advertising their products. Using-paid-promotion is not an option for these startup,samll businesses. My platform is a free solution for these owners to advertise their products by customizing their cards, menus, photos, social media links,and much more. Full stack web application developed using C#,.Net5,Reactjs,MSSQL.",
+    "link":[
+      {
+      "href":"https://github.com/salimdawood/Lebanese-Homemade-API",
+      "text":"Project(API) Github link"
+      },
+      {
+      "href":"https://github.com/salimdawood/Lebanese-Homemade-Frontend",
+      "text":"Project(Frontend) Github link"
+      }]
+  }
+]
