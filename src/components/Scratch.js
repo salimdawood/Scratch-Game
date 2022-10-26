@@ -3,7 +3,7 @@ import React,{useRef,useState,useEffect} from 'react'
 import {Check} from './Svg'
 import Animation from './Animation/Animation'
 
-const Scratch = ({text_reveal,openPopUp}) => {
+const Scratch = (props) => {
 
   //catch nodes for direct changes
   const refContainer = useRef()
@@ -22,10 +22,10 @@ const Scratch = ({text_reveal,openPopUp}) => {
       const scratch_reveal = document.createElement('div')
       scratch_reveal.className = 'card-reveal'
       const scratch_reveal_1 = document.createElement('h1')
-      scratch_reveal_1.innerText=text_reveal
+      scratch_reveal_1.innerText=props.text_reveal
       scratch_reveal.append(scratch_reveal_1)
       refContainer.current.replaceChildren(scratch_reveal)
-      scratch_reveal.onclick = openPopUp
+      scratch_reveal.onclick = props.openPopUp
     }
   }, [scratchComplete])
   
@@ -120,7 +120,7 @@ const Scratch = ({text_reveal,openPopUp}) => {
       </div>
       <div className='card' onMouseMove={scratchMouse} onTouchMove={scratchFinger}>
         <div ref={refContainer} className='card-inner'>
-          <h1 ref={refLink}>{text_reveal}</h1>
+          <h1 ref={refLink}>{props.text_reveal}</h1>
         </div>
       </div>
     </div>
