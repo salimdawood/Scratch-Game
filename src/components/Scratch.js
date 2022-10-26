@@ -17,17 +17,18 @@ const Scratch = (props) => {
   //change scratch effect to normal card
   useEffect(() => {
     if(scratchComplete >=100){
+      let {text_reveal,openPopUp} = props
       setApplyScratch(false)
       //openPopUp()
       const scratch_reveal = document.createElement('div')
       scratch_reveal.className = 'card-reveal'
       const scratch_reveal_1 = document.createElement('h1')
-      scratch_reveal_1.innerText=props.text_reveal
+      scratch_reveal_1.innerText = text_reveal
       scratch_reveal.append(scratch_reveal_1)
       refContainer.current.replaceChildren(scratch_reveal)
-      scratch_reveal.onclick = props.openPopUp
+      scratch_reveal.onclick = openPopUp
     }
-  }, [scratchComplete])
+  }, [scratchComplete,props])
   
   useEffect(() => {
     if(!applyScratch){
