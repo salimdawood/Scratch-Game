@@ -14,7 +14,7 @@ const ProjectDetails = ({project}) => {
   return (
     <>
       <div id="project-information" className="project-info">
-        <img src={media_source} loading="lazy"/> 
+        <img src={media_source} loading="lazy" alt='project-cover'/> 
         <div className="info">
           <h1>{name}</h1>
           <span>{path}</span>

@@ -53,7 +53,7 @@ const ImageSlider = ({photoList,path}) => {
           <video src={media_source} loading="lazy"/>
         </div>
         :
-        <img src={media_source} loading="lazy" key={index} onClick={()=>showFullScreen(index)}/> 
+        <img src={media_source} loading="lazy" key={index} onClick={()=>showFullScreen(index)} alt="project-cover"/> 
       } catch (error) {}
   }
 
