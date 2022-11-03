@@ -38,7 +38,7 @@
     "name":"Lebanese Homemade",
     "path":"react+api",
     "media":["cover.png","p1.png","p2.png","p3.png","p4.png","p5.png","p6.png","v1.mp4","v2.mp4","v3.mp4","v4.mp4"],
-    "description":"Lebanese samll business owners are having hard time advertising their products. Using-paid-promotion is not an option for these startup,samll businesses. My platform is a free solution for these owners to advertise their products by customizing their cards, menus, photos, social media links,and much more. Full stack web application developed using C#,.Net5,Reactjs,MSSQL.",
+    "description":"Lebanese small business owners are having hard time advertising their products. Using-paid-promotion is not an option for these startup, small businesses. My platform is a free solution for these owners to advertise their products by customizing their cards, menus, photos, social media links, and much more. Full stack web application developed using C#,.Net5,Reactjs,MSSQL.",
     "link":[
       {
       "href":"https://github.com/salimdawood/Lebanese-Homemade-API",
