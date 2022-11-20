@@ -14,10 +14,10 @@ import ProjectInformation from './ProjectInformation.json'
 const Projects = () => {
 
   const project_titles = [
-    '3D Maze','Managment System','NITE','Front-end Shop','Voice Recognition Calculator','Lebanese Homemade'
+    'Lebanese Homemade','Front-end Shop','Voice Recognition Calculator','NITE','Managment System','3D Maze'
   ]
   const project_cover_photo = [
-    src1,src2,src3,src4,src5,src6
+    src6,src4,src5,src3,src2,src1
   ]
 
   const[projectDetails,setProjectDetails] = useState(null)
